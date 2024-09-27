@@ -20,10 +20,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Registro Clientes</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('rutacacas') }}">Registro Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('rutaclientes') }}">Consulta Clientes</a>
+                        <a class="nav-link" href="{{ route('rutaconsulta') }}">Consulta Clientes</a>
                     </li>
                 </ul>
             </div>

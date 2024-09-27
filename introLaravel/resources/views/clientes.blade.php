@@ -20,16 +20,38 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{ route('rutaformulario') }}">Registro Clientes</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('rutacacas') }}">Registro Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Consulta Clientes</a>
+                        <a class="nav-link" href="{{ route('rutaconsulta') }}">Consulta Clientes</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     {{-- Finaliza navbar --}}
+
+
+    {{-- Inicia tarjetaCliente --}}
+<div class="container mt-5 col-md-8">
+    <div class="card text-justify font-monospace">
+        <div class="card-header fs-5 text-primary">
+            Ivan Isay Guerra
+        </div>
+        <div class="card-body">
+            <h5 class="fw-bold">ivan.guerra@outlook.com</h5>
+            <h5 class="fw-medium">4424283836</h5>
+            <p class="card-text fw-lighter"></p>
+        </div>
+        <div class="card-footer text-muted">
+            <button type="submit" class="btn btn-warning btn-sm">Actualizar</button>
+            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+        </div>
+    </div>
+</div> {{-- divcontainer --}}
+{{-- Finaliza tarjetaCliente --}}
+
+    
 
 </body>
 </html>
