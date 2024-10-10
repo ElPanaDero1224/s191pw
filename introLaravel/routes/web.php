@@ -14,6 +14,8 @@ Route::view('/form', 'formulario')->name('rutacacas');
 
 Route::view('/consultar', 'clientes')->name('rutaconsulta');
 
+Route::view('/component', 'componentes') ->name('rutacomponent');
+
 /*
 ->name('')
 Este comando sirve para darle un apodo al nombre
