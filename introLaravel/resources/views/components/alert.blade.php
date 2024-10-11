@@ -1,3 +1,9 @@
-<div>
-    <!-- If you do not have a consistent goal in life, you can not live it in a consistent way. - Marcus Aurelius -->
+
+<div class="container mt-4">
+
+
+    <div class="alert alert-{{ $tipo }}" role="alert">
+        Soy un alert {{ $slot }}
+    </div>
+
 </div>

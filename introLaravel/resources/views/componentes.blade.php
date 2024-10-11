@@ -11,6 +11,10 @@
     <x-Card encabezado="componente 2" titulo="titulo 2" textoBoton="No Guardar"> 
         Contenido de tarjeta 2
     </x-Card>
+
+    <x-Alert tipo="danger">Rojo</x-Alert>
+
+    <x-Alert tipo="warning">Amarillo</x-Alert>
   
 
 @endsection
