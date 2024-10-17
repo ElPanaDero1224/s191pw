@@ -11,6 +11,18 @@ Route::get('/form',[controladorVistas::class,'insert'])->name('rutacacas');
 
 Route::get('/consultar',[controladorVistas::class,'select'])->name('rutaconsulta');
 
+Route::view('/component', 'componentes')->name('rutacomponent');
+
+Route::post('/enviarCliente', [controladorVistas::class,'procesarCliente' ])->name('rutaenvia');
+
+
+
+
+
+
+
+
+
 /*
 Route::get('/', function () {
     return view('welcome');
@@ -23,7 +35,7 @@ Route::get('/', function () {
 
 /*  Route::view('/consultar', 'clientes')->name('rutaconsulta'); */
 
-Route::view('/component', 'componentes') ->name('rutacomponent');
+
 
 /*
 ->name('')
