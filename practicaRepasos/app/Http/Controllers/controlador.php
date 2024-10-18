@@ -11,6 +11,10 @@ class controlador extends Controller
         return view('inicio');
     }
 
-    
+    public function repaso1(){
+        return view('repaso1');
+    }
+
+
 
 }

@@ -17,6 +17,11 @@
 <p style="text-align: center;">Ingenieria en sistemas computacionales</p>
 <p style="text-align: center;">Mtro Ivan Isay Guerra Lopez</p>
 <p style="text-align: center;">Soy Pedro Samuel, el creador de esta página</p>
+
+<div class="d-flex justify-content-center">
+    <a href="{{ route('rutacacasrevenge') }}" class="btn btn-danger" role="button">REPASO 1</a>
+</div>
+
 <img src="{{asset('img/goose3.gif')}}" style="display: block; margin: 0 auto;">
 
 <pre style="text-align: center;">
