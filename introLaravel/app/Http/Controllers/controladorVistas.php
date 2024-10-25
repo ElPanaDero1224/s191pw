@@ -22,6 +22,13 @@ class controladorVistas extends Controller
 
     public function procesarCliente(Request $peticion){
 
+        $validacion= $peticion->validate([ 
+            'txtnombre'=> 'required|min:3|max:20|alpha',
+            'txtapellido'=> 'required|alpha',
+            'txtcorreo'=> 'required|email:dns,rfc',
+            'txttelefono'=> 'required|numeric',
+        ]);
+
         //Respuesta a la peticion post
         //return 'La info del cliente llego al controlador';
         //redireccion
@@ -44,6 +51,7 @@ class controladorVistas extends Controller
         //redireccion enviando msj en session
         $usuario= $peticion->input('txtnombre');
         session()->flash('exito','Se guardo el usuario: '.$usuario);
+
         return to_route('rutacacas');
 
     }
