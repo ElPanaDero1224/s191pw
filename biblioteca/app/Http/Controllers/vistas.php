@@ -15,4 +15,9 @@ class vistas extends Controller
         return view('Registro');
     }
 
+
+    public function formularioRegistro(Request $request){
+        return $request->all();
+    }
+
 }

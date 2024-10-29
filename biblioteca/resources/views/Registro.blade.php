@@ -5,7 +5,8 @@
 <div class="container my-5">
     <h2 class="text-center mb-4">Registrar Libro</h2>
 
-    <form>
+    <form action="/formulario" method="POST" >
+        @csrf
         <!-- ISBN -->
         <div class="mb-3">
             <label for="isbn" class="form-label">ISBN:</label>
@@ -52,6 +53,7 @@
         <div class="d-grid">
             <button type="submit" class="btn btn-primary">Registrar Libro</button>
         </div>
+
     </form>
 </div>
 
