@@ -10,43 +10,64 @@
         <!-- ISBN -->
         <div class="mb-3">
             <label for="isbn" class="form-label">ISBN:</label>
-            <input type="text" class="form-control" name="isbn" placeholder="Ingresa el ISBN">
+            <input type="text" class="form-control" name="isbn" placeholder="Ingresa el ISBN" value="{{old('isbn')}}">
+            <small class="text-danger">
+                <i class="fas fa-exclamation-circle"></i> {{ $errors->first('isbn') }}
+            </small>
         </div>
 
         <!-- Título -->
         <div class="mb-3">
             <label for="titulo" class="form-label">Título:</label>
-            <input type="text" class="form-control" name="titulo" placeholder="Ingresa el título del libro">
+            <input type="text" class="form-control" name="titulo" placeholder="Ingresa el título del libro" value="{{old('titulo')}}">
+            <small class="text-danger">
+                <i class="fas fa-exclamation-circle"></i> {{ $errors->first('titulo') }}
+            </small>
         </div>
 
         <!-- Autor -->
         <div class="mb-3">
             <label for="autor" class="form-label">Autor:</label>
-            <input type="text" class="form-control" name="autor" placeholder="Ingresa el autor">
+            <input type="text" class="form-control" name="autor" placeholder="Ingresa el autor" value="{{old('autor')}}">
+            <small class="text-danger">
+                <i class="fas fa-exclamation-circle"></i> {{ $errors->first('autor') }}
+            </small>
         </div>
 
         <!-- Páginas -->
         <div class="mb-3">
             <label for="paginas" class="form-label">Páginas:</label>
-            <input type="number" class="form-control" name="paginas" placeholder="Número de páginas">
+            <input type="number" class="form-control" name="paginas" placeholder="Número de páginas" value="{{old('paginas')}}">
+            <small class="text-danger">
+                <i class="fas fa-exclamation-circle"></i> {{ $errors->first('paginas') }}
+            </small>
         </div>
 
         <!-- Año de Publicación -->
         <div class="mb-3">
             <label for="anio" class="form-label">Año de Publicación:</label>
-            <input type="number" class="form-control" name="anio" placeholder="Año de publicación">
+            <input type="number" class="form-control" name="anio" placeholder="Año de publicación" value="{{old('anio')}}">
+            <small class="text-danger">
+                <i class="fas fa-exclamation-circle"></i> {{ $errors->first('anio') }}
+            </small>
         </div>
 
         <!-- Editorial -->
         <div class="mb-3">
             <label for="editorial" class="form-label">Editorial:</label>
-            <input type="text" class="form-control" name="editorial" placeholder="Ingresa la editorial">
+            <input type="text" class="form-control" name="editorial" placeholder="Ingresa la editorial" value="{{old('editorial')}}">
+            <small class="text-danger">
+                <i class="fas fa-exclamation-circle"></i> {{ $errors->first('editorial') }}
+            </small>
         </div>
 
         <!-- Email de Editorial -->
         <div class="mb-3">
             <label for="email" class="form-label">Email de Editorial:</label>
-            <input type="email" class="form-control" name="email" placeholder="Correo electrónico de la editorial">
+            <input type="email" class="form-control" name="email" placeholder="Correo electrónico de la editorial" value="{{old('email')}}">
+            <small class="text-danger">
+                <i class="fas fa-exclamation-circle"></i> {{ $errors->first('email') }}
+            </small>
         </div>
 
         <!-- Botón de Enviar -->
