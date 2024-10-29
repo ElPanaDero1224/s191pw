@@ -57,4 +57,30 @@
     </form>
 </div>
 
+
+
+@if(isset($datos))
+<div class="container my-5">
+    <h2 class="text-center mb-4">Datos del Libro Registrado</h2>
+
+    <ul class="list-group">
+        <li class="list-group-item"><strong>ISBN:</strong> {{ $datos['isbn']}}</li>
+        <li class="list-group-item"><strong>Título:</strong> {{ $datos['titulo'] }}</li>
+        <li class="list-group-item"><strong>Autor:</strong> {{ $datos['autor'] }}</li>
+        <li class="list-group-item"><strong>Páginas:</strong> {{ $datos['paginas']}}</li>
+        <li class="list-group-item"><strong>Año de Publicación:</strong> {{ $datos['anio']}}</li>
+        <li class="list-group-item"><strong>Editorial:</strong> {{ $datos['editorial'] }}</li>
+        <li class="list-group-item"><strong>Email:</strong> {{ $datos['email'] }}</li>
+    </ul>
+
+    <div class="d-grid mt-4">
+        <a href="/" class="btn btn-primary">Volver</a>
+    </div>
+</div>
+@else
+<p class="text-center my-5">No hay resultados disponibles.</p>
+@endif
+
+
+
 @endsection

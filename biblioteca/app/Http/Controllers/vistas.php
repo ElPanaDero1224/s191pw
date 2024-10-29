@@ -17,7 +17,8 @@ class vistas extends Controller
 
 
     public function formularioRegistro(Request $request){
-        return $request->all();
+        $datos = $request->all();
+        return view('Registro', compact('datos'));
     }
 
 }
