@@ -97,10 +97,28 @@
     <div class="d-grid mt-4">
         <a href="/" class="btn btn-primary">Volver</a>
     </div>
+
+<script>
+    alertify.alert(
+        "Todo correcto: Libro \"{{ $datos['titulo'] }}\" guardado", 
+        function() {
+            alertify.message('OK');
+        }
+        );
+</script>
+    
+
+</script>
 </div>
+
 @else
 <p class="text-center my-5">No hay resultados disponibles.</p>
 @endif
+
+
+<section>
+
+</section>
 
 
 
