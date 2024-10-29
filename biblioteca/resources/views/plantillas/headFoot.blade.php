@@ -47,7 +47,7 @@
 <body class="bg-light">
 
 <div class="page-container">
-    <!-- Navbar fija en la parte superior -->
+
     <nav class="navbar navbar-expand-lg" style="background-color: #efdd58;">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{route('menu')}}">Biblioteca Épica</a>
@@ -65,12 +65,11 @@
         </div>
     </nav>
 
-    <!-- Contenido dinámico -->
+
     <div class="content">
         @yield('contenido')
     </div>
 
-    <!-- Footer fijo al fondo -->
     <footer class="text-center">
         <div class="container d-flex flex-column align-items-center justify-content-center">
             <p class="mb-0">Biblioteca Épica</p>
