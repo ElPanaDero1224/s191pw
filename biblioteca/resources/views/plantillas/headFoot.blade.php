@@ -29,7 +29,7 @@
         }
 
         footer {
-            position: fixed;
+
             bottom: 0;
             width: 100%;
             height: 100px;
@@ -50,15 +50,15 @@
     <!-- Navbar fija en la parte superior -->
     <nav class="navbar navbar-expand-lg" style="background-color: #efdd58;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Biblioteca Épica</a>
+            <a class="navbar-brand" href="{{route('menu')}}">Biblioteca Épica</a>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('menu')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Registrar</a>
+                        <a class="nav-link" href="{{ route('registro') }}">Registrar</a>
                     </li>
                 </ul>
             </div>

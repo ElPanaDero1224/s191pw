@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('Principal');
-});
+
+
+Route::view('/', 'Principal')->name('menu');
+Route::view('/registro', 'Registro')->name('registro');
 
