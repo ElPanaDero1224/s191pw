@@ -10,7 +10,7 @@
         <!-- ISBN -->
         <div class="mb-3">
             <label for="isbn" class="form-label">ISBN:</label>
-            <input type="text" class="form-control" name="isbn" placeholder="{{__('Ingresa el ISBN')}}" value="{{old('isbn')}}">
+            <input class="form-control" name="isbn" placeholder="{{__('Ingresa el ISBN')}}" value="{{old('isbn')}}">
             <small class="text-danger">
                 <i class="fas fa-exclamation-circle"></i> {{ $errors->first('isbn') }}
             </small>
@@ -19,7 +19,7 @@
         <!-- Título -->
         <div class="mb-3">
             <label for="titulo" class="form-label">{{__('Título')}}:</label>
-            <input type="text" class="form-control" name="titulo" placeholder="{{__('Ingresa el título del libro')}}:" value="{{old('titulo')}}">
+            <input class="form-control" name="titulo" placeholder="{{__('Ingresa el título del libro')}}:" value="{{old('titulo')}}">
             <small class="text-danger">
                 <i class="fas fa-exclamation-circle"></i> {{ $errors->first('titulo') }}
             </small>
@@ -28,7 +28,7 @@
         <!-- Autor -->
         <div class="mb-3">
             <label for="autor" class="form-label">{{__('Autor')}}:</label>
-            <input type="text" class="form-control" name="autor" placeholder="{{__('Ingresa el autor')}}" value="{{old('autor')}}">
+            <input class="form-control" name="autor" placeholder="{{__('Ingresa el autor')}}" value="{{old('autor')}}">
             <small class="text-danger">
                 <i class="fas fa-exclamation-circle"></i> {{ $errors->first('autor') }}
             </small>
@@ -46,7 +46,7 @@
         <!-- Año de Publicación -->
         <div class="mb-3">
             <label for="anio" class="form-label">{{__('Año de Publicación')}}:</label>
-            <input type="number" class="form-control" name="anio" placeholder="{{__('Ingresa el año de publicación')}}" value="{{old('anio')}}">
+            <input class="form-control" name="anio" placeholder="{{__('Ingresa el año de publicación')}}" value="{{old('anio')}}">
             <small class="text-danger">
                 <i class="fas fa-exclamation-circle"></i> {{ $errors->first('anio') }}
             </small>
@@ -64,7 +64,7 @@
         <!-- Email de Editorial -->
         <div class="mb-3">
             <label for="email" class="form-label">{{__('Email de Editorial')}}:</label>
-            <input type="email" class="form-control" name="email" placeholder="{{__('Ingresa el email de la editorial')}}" value="{{old('email')}}">
+            <input class="form-control" name="email" placeholder="{{__('Ingresa el email de la editorial')}}" value="{{old('email')}}">
             <small class="text-danger">
                 <i class="fas fa-exclamation-circle"></i> {{ $errors->first('email') }}
             </small>
