@@ -5,12 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('titulo')</title>
-    <!-- CSS de Alertify -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-    <!-- Tema Bootstrap de Alertify -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
-
-    <!-- JavaScript de Alertify -->
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
 
 
@@ -60,15 +56,15 @@
 
     <nav class="navbar navbar-expand-lg" style="background-color: #efdd58;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{route('menu')}}">Biblioteca Épica</a>
+            <a class="navbar-brand" href="{{route('menu')}}">{{__('Biblioteca Épica')}}</a>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{route('menu')}}">Home</a>
+                        <a class="nav-link active" aria-current="page" href="{{route('menu')}}">{{__('Inicio')}}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('registro') }}">Registrar</a>
+                        <a class="nav-link" href="{{ route('registro') }}">{{__('Registrar Libro')}}</a>
                     </li>
                 </ul>
             </div>
@@ -82,7 +78,7 @@
 
     <footer class="text-center">
         <div class="container d-flex flex-column align-items-center justify-content-center">
-            <p class="mb-0">Biblioteca Épica</p>
+            <p class="mb-0">{{__('Biblioteca Épica')}}</p>
             <small>&copy; 2024 copyright reserved</small>
             <time datetime="2024-10-28">October 28, 2024</time>
         </div>
