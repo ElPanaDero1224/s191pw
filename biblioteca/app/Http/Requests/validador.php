@@ -31,7 +31,7 @@ class validador extends FormRequest
             "paginas" => 'required|numeric|min:1',
             "anio" => 'required|numeric|digits:4|max:2024',
             "editorial" => 'required|string',
-            "email" => 'required|email:dns,rfc',
+            "email" => 'required|email:rfc,dns',
         ];
     }
 }

@@ -94,9 +94,7 @@
         <li class="list-group-item"><strong>{{__('Email')}}:</strong> {{ $datos['email'] }}</li>
     </ul>
 
-    <div class="d-grid mt-4">
-        <a href="/" class="btn btn-primary">Volver{{__('Registrar Libro')}}</a>
-    </div>
+
 
 <script>
     alertify.alert(
