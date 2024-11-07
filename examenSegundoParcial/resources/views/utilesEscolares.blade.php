@@ -21,14 +21,17 @@
         @endif
 
         <label for="nombre" class="f">Nombre:</label>
-        <input type="text" name="nombre">
+        <input type="text" name="nombre" value="{{old('nombre')}}">
         <small class="text-danger fst-italic"> {{ $errors->first('nombre') }} </small>
+
         <label for="nombre" class="form-label">Marca:</label>
-        <input type="text"  name="marca">
+        <input type="text"  name="marca" value="{{old('marca')}}">
         <small class="text-danger fst-italic"> {{ $errors->first('marca') }} </small>
+
         <label for="nombre" class="form-label">Cantidad:</label>
-        <input type="text"  name="cantidad">
+        <input type="text"  name="cantidad" value="{{old('cantidad')}}">
         <small class="text-danger fst-italic"> {{ $errors->first('cantidad') }} </small>
+
         <button type="submit" class="btn btn-success ">Guardar Material</button>
     </form>
     

@@ -24,7 +24,7 @@ class utilesValidaciones extends FormRequest
         return [
             'nombre'=> 'required',
             'marca'=> 'required',
-            'cantidad'=> 'required|number',
+            'cantidad'=> 'required|numeric',
         ];
     }
 }
