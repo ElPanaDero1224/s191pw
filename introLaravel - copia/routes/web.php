@@ -9,7 +9,7 @@ use App\Http\Controllers\clienteControler;
 
 Route::get('/',[controladorVistas::class,'home'])->name('rutainicio');
 
-#Route::get('/form',[controladorVistas::class,'insert'])->name('rutacacas');
+
 
 Route::get('/consultar',[controladorVistas::class,'select'])->name('rutaconsulta');
 
