@@ -10,19 +10,29 @@ use App\Http\Requests\validadorCliente;
 class clienteControler extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Funcion para mostrar la vista de la consulta
      */
     public function index()
     {
-        //
+        $consultaClientes= DB::table('cliente')->get();
+        #va con comillas simples y sin el signo de pesos
+        return view('clientes', compact('consultaClientes'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Funcion para mostrar el fomrulario
      */
     public function create()
     {
         return view('formulario');
+    }
+
+
+    /**
+     * Funcion para mostrar el fomrulario
+     */
+    public function home(){
+        return view('inicio');
     }
 
     /**
@@ -36,7 +46,7 @@ class clienteControler extends Controller
             'correo'=> $request->input('txtcorreo'),
             'telefono'=> $request->input('txttelefono'),
             'created_at'=> Carbon::now(),
-            'updated_at'=> carbon::now()
+            'updated_at'=> Carbon::now()
 
         ]);
         $usuario= $request->input('txtnombre');
