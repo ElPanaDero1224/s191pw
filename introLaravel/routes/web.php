@@ -16,6 +16,11 @@ Route::get('/',[clienteControler::class,'home'])->name('rutainicio');
 
 Route::get('/cliente',[clienteControler::class,'index'])->name('rutaconsulta');
 
+Route::get('/actualizar/{id}/edit',[clienteControler::class,'edit'])->name('rutaActualizar');
+
+Route::put('/cliente/{id}', [clienteControler::class, 'update'])->name('Actualizar');
+
+Route::delete('/cliente/{id}', [clienteControler::class, 'destroy'])->name('rutaEliminar');
 
 
 

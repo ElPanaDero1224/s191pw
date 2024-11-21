@@ -27,7 +27,6 @@ class clienteControler extends Controller
         return view('formulario');
     }
 
-
     /**
      * Funcion para mostrar el fomrulario
      */
@@ -68,15 +67,26 @@ class clienteControler extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $cliente = DB::table('cliente')->where('id', $id)->first();
+        return view('actualizar', compact('cliente'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(validadorCliente $request, string $id)
     {
-        //
+        DB::table('cliente')->where('id', $id)->update([
+            'nombre' => $request->input('txtnombre'),
+            'apellido' => $request->input('txtapellido'),
+            'correo' => $request->input('txtcorreo'),
+            'telefono' => $request->input('txttelefono'),
+            'updated_at' => Carbon::now(),
+        ]);
+
+        $nombre = $request->input('txtnombre');
+        return to_route('rutaconsulta')->with('exito', __("¡El cliente :nombre ha sido actualizado correctamente!", ['nombre' => $nombre]));
+
     }
 
     /**
@@ -84,6 +94,7 @@ class clienteControler extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('cliente')->where('id', $id)->delete();
+        return to_route('rutaconsulta')->with('exito', 'Cliente eliminado correctamente.');
     }
 }

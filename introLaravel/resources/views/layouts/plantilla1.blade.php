@@ -11,6 +11,17 @@
 <body>
 
 
+    @if(session('exito'))
+            <script>
+                Swal.fire({
+                    title: "¡Éxito!",
+                    text: "{{ session('exito') }}",
+                    icon: "success",
+                    confirmButtonText: "OK"
+                });
+            </script>
+        @endif
+
 {{-- inicia navbar --}}
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div class="container-fluid">

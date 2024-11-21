@@ -1,5 +1,24 @@
 @extends('layouts.plantilla1')
 
+<script>
+    function confirmarEliminacion(id) {
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: "No podrás revertir esto.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Sí, eliminar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.getElementById(`form-eliminar-${id}`).submit();
+            }
+        });
+    }
+</script>
+
 @section('titulo', 'Clientes')
 
 @section('contenido')
@@ -22,8 +41,17 @@
             <p class="card-text fw-lighter"></p>
         </div>
         <div class="card-footer text-muted">
-            <button type="submit" class="btn btn-warning btn-sm">{{__('Actualizar')}} </button>
-            <button type="submit" class="btn btn-danger btn-sm">{{__('Eliminar')}} </button>
+            <a href="{{ route('rutaActualizar', $cliente->id) }}" class="btn btn-warning btn-sm">{{__('Actualizar')}}</a>
+            
+        <form id="form-eliminar-{{ $cliente->id }}" action="{{ route('rutaEliminar', $cliente->id) }}" method="POST" style="display: none;">
+            @csrf
+            @method('DELETE')
+        </form>
+        <button type="button" class="btn btn-danger btn-sm" onclick="confirmarEliminacion({{ $cliente->id }})">
+            {{ __('Eliminar') }}
+        </button>
+
+
         </div>
     </div>
 
