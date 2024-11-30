@@ -37,7 +37,7 @@
             </div>
             <div class="card-body text-justify">
 
-                <form method="POST" action="/enviarCliente">
+                <form method="POST" action="{{ route('cliente.store') }}">
                     @csrf
 
                     <div class="mb-3">
